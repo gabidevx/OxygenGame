@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="Favicon.ico">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+    <ul style="border-radius:20px;">
+        <li> <a href="home.html">Home</a></li>
+        <li> <a href="game.html">Jocul Oxigenului</a></li>
+    </ul>
+
+    <div>
+        <div style="float:left">
+            <div id="stat">Stats:</div>
+            <div>
+                <div id="money">
+                    Oxigen: 0
+                </div>
+                <div id="freeMoney">
+                    Oxigen/s: 1
+                </div>
+                <div id="perClick">
+                    +1 on click
+                </div>
+            </div>
+            <div>
+                <div id="tips">
+                    Tip: Apasa pe copac
+                </div>
+                <div>
+                    <img src="Copac.png" id="clickImage" onclick="addMoney()" style="height:450px;margin:10px; transform:scale(0.9); ">
+                </div>
+            </div>
+            <div>
+                <div id="saveData" onclick="saveData()">
+                    Save Data
+                </div>
+                <div id="loadData" onclick="loadData()">
+                    Load Data
+                </div>
+                <div id="resetData" onclick="resetData()">
+                    Reset Data
+                </div>
+            </div>
+        </div>
+
+        <div style="float:right">
+                <div id="upgbutton1" onclick="upgradeClick()">
+                    <div>Oxigen/Click:</div><br>
+                    <div id="upgs">Upgrade: 0</div>
+                    <div id="cost">Cost: 10</div>
+                </div>
+                <div id="upgbutton2" onclick="upgradePassive()">
+                    <div>Oxigen/s:</div><br>
+                    <div id="upgsPassive">Upgrade: 0</div>
+                    <div id="costPassive">Cost: 10</div>
+                </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

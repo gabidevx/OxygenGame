@@ -1,0 +1,98 @@
+@keyframes animatieGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+h1 {
+    color: white;
+}
+
+body {
+    background-color:hsl(0, 1%, 15%);
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 10px;
+    border: 2px solid black;
+    position: static;
+    justify-content: center;
+    gap: 20px;
+    display: flex;
+    background: radial-gradient(black,black,black,hsl(0, 1%, 15%),black,black,black);
+    background-size: 400% 400%;
+    animation: animatieGradient 10s ease infinite;
+}
+
+li a{
+    display: block;
+    color:white;
+    text-align:center;
+    padding:6px;
+    text-decoration:none;
+    border-radius:20px;
+}
+
+li a:hover {
+    background: linear-gradient(60deg,green, green, blue,red, blue, green, green);
+    background-size: 400% 400%;
+    transform: scale(1.3);
+    transition: transform 0.15s ease;
+    border: 2px solid black;
+    animation: animatieGradient 3.5s infinite;
+}
+
+#money, #upgbutton1, #upgbutton2, #perClick, #freeMoney, #stat {
+    color: white;
+    font-size: 150%;
+    padding: 5px;
+    display: inline-table;
+    background: linear-gradient(45deg,blue, blue, blue, blue, skyblue, blue, blue, blue,blue);
+    background-size: 500%, 500%;
+    border-radius: 20px;
+    animation: animatieGradient 3.5s infinite;
+    border:2px solid black;
+}
+
+
+#money:hover, #upgbutton1:hover, #upgbutton2:hover, #perClick:hover, #freeMoney:hover, #stat:hover {
+    transform: scale(1.2);
+    transition: transform 0.15s ease;
+}
+
+#saveData,#loadData,#resetData {
+    color: white;
+    font-size: 150%;
+    padding: 5px;
+    display: inline-table;
+    background: linear-gradient(45deg,blue, blue, blue, blue,purple, red,purple, blue, blue, blue,blue);
+    background-size: 500%, 500%;
+    border-radius: 20px;
+    animation: animatieGradient 3.5s infinite;
+    border:2px solid black;
+}
+
+#saveData:hover, #loadData:hover,#resetData:hover {
+    transform:scale(1.2);
+    transition: transform 0.15s ease;
+}
+
+#tips {
+    color: white;
+    background-image: radial-gradient(black,black,black,black, black, gold,black, black,black,black,black);
+    font-size:150%;
+    animation: animatieGradient 3.5s infinite;
+    background-size: 500% 500%;
+    border-radius: 20px;
+    padding: 2px;
+}
