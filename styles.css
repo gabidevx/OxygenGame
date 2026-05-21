@@ -16,8 +16,16 @@ h1 {
     color: white;
 }
 
-body {
-    background-color:hsl(0, 1%, 15%);
+#bodygame {
+    background-image: linear-gradient(135deg,black,black,hsl(0, 1%, 15%),hsl(0, 1%, 15%),black,black);
+    background-size: 300% 300%;
+    animation: animatieGradient 30s ease infinite;
+}
+
+#bodyhome {
+    background-image: linear-gradient(135deg,hsl(199, 99%, 77%), hsl(199, 99%, 77%), white, hsl(199, 99%, 77%),hsl(199, 99%, 77%));
+    background-size: 300% 300%;
+    animation: animatieGradient 15s ease infinite;
 }
 
 ul {
@@ -29,9 +37,9 @@ ul {
     justify-content: center;
     gap: 20px;
     display: flex;
-    background: radial-gradient(black,black,black,hsl(0, 1%, 15%),black,black,black);
+    background: radial-gradient(gray,black,black,black,gray,hsl(0, 1%, 15%),gray,black,black,black,gray);
     background-size: 400% 400%;
-    animation: animatieGradient 10s ease infinite;
+    animation: animatieGradient 12s alternate infinite;
 }
 
 li a{
@@ -52,7 +60,7 @@ li a:hover {
     animation: animatieGradient 3.5s infinite;
 }
 
-#money, #upgbutton1, #upgbutton2, #perClick, #freeMoney, #stat {
+#money, #upgbutton1, #upgbutton2, #perClick, #freeMoney, #stat, #rebirths, #rebirthButton {
     color: white;
     font-size: 150%;
     padding: 5px;
@@ -61,16 +69,16 @@ li a:hover {
     background-size: 500%, 500%;
     border-radius: 20px;
     animation: animatieGradient 3.5s infinite;
-    border:2px solid black;
+    border: 2px solid black;
 }
 
 
-#money:hover, #upgbutton1:hover, #upgbutton2:hover, #perClick:hover, #freeMoney:hover, #stat:hover {
+#money:hover, #upgbutton1:hover, #upgbutton2:hover, #perClick:hover, #freeMoney:hover, #stat:hover, #rebirths:hover, #rebirthButton:hover {
     transform: scale(1.2);
     transition: transform 0.15s ease;
 }
 
-#saveData,#loadData,#resetData {
+#saveData, #loadData, #resetData, #cheat {
     color: white;
     font-size: 150%;
     padding: 5px;
@@ -79,20 +87,36 @@ li a:hover {
     background-size: 500%, 500%;
     border-radius: 20px;
     animation: animatieGradient 3.5s infinite;
-    border:2px solid black;
+    border: 2px solid black;
 }
 
-#saveData:hover, #loadData:hover,#resetData:hover {
+#saveData:hover, #loadData:hover,#resetData:hover,#cheat:hover {
     transform:scale(1.2);
     transition: transform 0.15s ease;
 }
 
 #tips {
     color: white;
-    background-image: radial-gradient(black,black,black,black, black, gold,black, black,black,black,black);
-    font-size:150%;
-    animation: animatieGradient 3.5s infinite;
+    background-image: radial-gradient(green,black,green,black,green,black,green,black,green,black,green,black,green,black);
+    font-size: 150%;
+    animation: animatieGradient 10s infinite;
     background-size: 500% 500%;
     border-radius: 20px;
-    padding: 2px;
+    padding: 7px;
+    border: 2px solid black;
+}
+
+#tips:hover{
+    padding:15px;
+    transition: padding 0.15s ease;
+}
+
+#pozitieUpgrades {
+    float:right;
+}
+
+@media (max-width:768px){ /*pt telefon*/
+    #pozitieUpgrades{
+        float:left;
+    }
 }

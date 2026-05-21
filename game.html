@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="ro">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game</title>
+    <title>Jocul Oxigenului</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="Favicon.ico">
     <script src="scripts.js"></script>
 </head>
 
-<body>
+<body id="bodygame" style="font-family:Arial;">
     <ul style="border-radius:20px;">
-        <li> <a href="home.html">Home</a></li>
-        <li> <a href="game.html">Jocul Oxigenului</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="game.html">Jocul Oxigenului</a></li>
     </ul>
 
     <div>
@@ -24,10 +24,13 @@
                     Oxigen: 0
                 </div>
                 <div id="freeMoney">
-                    Oxigen/s: 1
+                    Oxigen pasiv: 1
                 </div>
                 <div id="perClick">
-                    +1 on click
+                    +1 pe click
+                </div>
+                <div id="rebirths">
+                    Rebirths: 0
                 </div>
             </div>
             <div>
@@ -35,7 +38,7 @@
                     Tip: Apasa pe copac
                 </div>
                 <div>
-                    <img src="Copac.png" id="clickImage" onclick="addMoney()" style="height:450px;margin:10px; transform:scale(0.9); ">
+                    <img src="Copac.png" id="clickImage" onclick="addMoney()" style="height:350px;margin:10px; transform:scale(0.9); ">
                 </div>
             </div>
             <div>
@@ -48,20 +51,37 @@
                 <div id="resetData" onclick="resetData()">
                     Reset Data
                 </div>
+                <div id="cheat" onclick="cheatMoney()">
+                    Adauga bani
+                </div>
+            </div>
+            <div style="color:white;">
+                Salvare automata odata la 1s
             </div>
         </div>
 
-        <div style="float:right">
+        <div id="pozitieUpgrades">
+            <div>
                 <div id="upgbutton1" onclick="upgradeClick()">
-                    <div>Oxigen/Click:</div><br>
+                    <div>Click upgrade:</div><br>
                     <div id="upgs">Upgrade: 0</div>
                     <div id="cost">Cost: 10</div>
                 </div>
                 <div id="upgbutton2" onclick="upgradePassive()">
-                    <div>Oxigen/s:</div><br>
+                    <div>Passive upgrade:</div><br>
                     <div id="upgsPassive">Upgrade: 0</div>
                     <div id="costPassive">Cost: 10</div>
                 </div>
+            </div>
+            <div id="rebirthButton" onclick="rebirth()">
+                <div>
+                    Rebirth:
+                </div>
+                <br>
+                <div id="rebirthCost">
+                    Cost: 1000
+                </div>
+            </div>
         </div>
     </div>
 
